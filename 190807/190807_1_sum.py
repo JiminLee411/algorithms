@@ -38,7 +38,7 @@ for test_case in range(1, 11):
         # [0][0], [1][1] ... [100][100]의 합을 다 구해야 함
         sum_1 += value[x][x]
         # [0][100], [1],[99] .... [100],[0]의 합을 다 구해야함
-        sum_2 += value[x][-x]
+        sum_2 += value[x][-x-1]
 
     sum_list.append(max(sum_1, sum_2))
 
@@ -79,3 +79,20 @@ for test_case in range(1, 11):
         sum_max = max(sum_max, sum_value)
 
     print('#{} {}'. format(tc, sum_max))
+
+# 3번
+for test_case in range(1, 11):
+    N = int(input())
+    arr = [list(map(int, input().split())) for _ in range(100)]
+
+    Max = 0
+    dsum1 = dsum2 = 0
+
+    for i in range(100):
+        rsum = csum = 0
+        dsum1 += arr[i][i]
+        dsum2 += arr[i][99-i]
+        for j in range(100):
+            rsum += arr[i][j]
+            csum += arr[j][i]
+        Max = max(Max, rsum, csum, dsum1, dsum2)
