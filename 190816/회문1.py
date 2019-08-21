@@ -15,8 +15,7 @@ def compp (N, board):
 for tc in range(1, 11):
     board = []
     N = int(input())
-    for _ in range(8):
-        board.append(input())
+    board = [input() for _ in range(8)]
 
     cnt = compp(N, board)
 
