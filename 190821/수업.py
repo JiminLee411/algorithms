@@ -93,60 +93,32 @@
 # print(fibo(40))
 
 # ---------------- DFS ------------------------------------#
-# import sys
-#
-# sys.stdin = open('DFS_input.txt')
-#
-# def DFS(v):
-#     S = []
-#     # 시작점을 방문하고, 스택에 push
-#     visit[v] = True
-#     print(v, end=' ')
-#     S.append(v)
-#     # 빈 스택이 아닐동안 반복
-#     while S:
-#         for w in G[v]:
-#             # v의 방문하지 않은 인접정점 w에 찾아서
-#             if not visit[w]:
-#                 # w를 방문하고, v를 스택에 push
-#                 visit[w] = True
-#                 print(w, end=' ')
-#                 S.append(v)
-#                 # v를 w로 설정
-#                 v = w
-#                 break
-#             # 만약, 인접정점이 없다면, 스택에서 pop()해서
-#             else:
-#                 # v로 설정
-#                 v = S.pop()
-# V, E = map(int, input().split()) # 정점수, 간선수
-# G = [[] for _ in range(V + 1)] # 1 ~ V 까지
-# visit = [False] * (V + 1) # 방문정보
-#
-# for _ in range(E):
-#     u, V = map(int, input().split())
-#     G[u].append(V)
-#     G[V].append(u) # 무향 그래프니까
-#
-# DFS(1)
-
-# for i in range(1, V + 1):
-#     print(i, '-->', G[i])
-
-# -------------DFS with 재귀호출 ---------------- #
 import sys
 
 sys.stdin = open('DFS_input.txt')
 
-def DFS(v): # v = 현재 방문하는 정점
+def DFS(v):
+    S = []
+    # 시작점을 방문하고, 스택에 push
     visit[v] = True
     print(v, end=' ')
-
-    for w in G[v]:
-        # v의 방문하지 않은 인접정점 w에 찾아서
-        if not visit[w]:
-            DFS(w)
-
+    S.append(v)
+    # 빈 스택이 아닐동안 반복
+    while S:
+        for w in G[v]:
+            # v의 방문하지 않은 인접정점 w에 찾아서
+            if not visit[w]:
+                # w를 방문하고, v를 스택에 push
+                visit[w] = True
+                print(w, end=' ')
+                S.append(w)
+                # v를 w로 설정
+                v = w
+                break
+            # 만약, 인접정점이 없다면, 스택에서 pop()해서
+            else:
+                # v로 설정
+                v = S.pop()
 V, E = map(int, input().split()) # 정점수, 간선수
 G = [[] for _ in range(V + 1)] # 1 ~ V 까지
 visit = [False] * (V + 1) # 방문정보
@@ -157,3 +129,29 @@ for _ in range(E):
     G[V].append(u) # 무향 그래프니까
 
 DFS(1)
+
+
+# -------------DFS with 재귀호출 ---------------- #
+# import sys
+#
+# sys.stdin = open('DFS_input.txt')
+#
+# def DFS(v): # v = 현재 방문하는 정점
+#     visit[v] = True
+#     print(v, end=' ')
+#
+#     for w in G[v]:
+#         # v의 방문하지 않은 인접정점 w에 찾아서
+#         if not visit[w]:
+#             DFS(w)
+#
+# V, E = map(int, input().split()) # 정점수, 간선수
+# G = [[] for _ in range(V + 1)] # 1 ~ V 까지
+# visit = [False] * (V + 1) # 방문정보
+#
+# for _ in range(E):
+#     u, V = map(int, input().split())
+#     G[u].append(V)
+#     G[V].append(u) # 무향 그래프니까
+#
+# DFS(1)

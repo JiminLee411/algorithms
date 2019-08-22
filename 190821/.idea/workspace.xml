@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c442cb81-2b76-44f0-aac6-7d1667c26360" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../190816/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../190816/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ladder_선생님.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ladder_DFS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../190822/4866_input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../190822/4866_괄호검사.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../190822/4869_input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../190822/4869_종이붙이기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../190822/4871_input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../190822/4871_그래프경로.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../190822/4873_input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../190822/4873_반복문자지우기.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../190822/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../190822/stack1_작업순서.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/수업.py" beforeDir="false" afterPath="$PROJECT_DIR$/수업.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,10 +25,10 @@
     <session id="-1186143248">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -36,31 +46,32 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="3" />
-          <entry key="py" value="3885" />
+          <entry key="py" value="3888" />
           <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="8" />
-          <entry key="Python" value="3885" />
+          <entry key="Python" value="3888" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/수업.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2622">
-              <caret line="138" column="33" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="33" />
+            <state relative-caret-position="452">
+              <caret line="120" selection-start-line="120" selection-end-line="120" />
               <folding>
-                <marker date="1566369259272" expanded="true" signature="317:324" ph="..." />
-                <marker date="1566369259272" expanded="true" signature="798:805" ph="..." />
-                <marker date="1566369259272" expanded="true" signature="901:908" ph="..." />
-                <marker date="1566369259272" expanded="true" signature="1893:1900" ph="..." />
-                <marker date="1566369259272" expanded="true" signature="1893:2456" ph="..." />
+                <marker date="1566449915361" expanded="true" signature="317:324" ph="..." />
+                <marker date="1566449915361" expanded="true" signature="798:805" ph="..." />
+                <marker date="1566449915361" expanded="true" signature="901:908" ph="..." />
+                <marker date="1566449915361" expanded="true" signature="1814:2639" ph="..." />
+                <marker date="1566449915361" expanded="true" signature="1883:1888" ph="..." />
+                <marker date="1566449915361" expanded="true" signature="1883:2406" ph="..." />
               </folding>
             </state>
           </provider>
@@ -75,7 +86,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Ladder_DFS.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
@@ -134,16 +145,17 @@
         <option value="$PROJECT_DIR$/4866.py" />
         <option value="$PROJECT_DIR$/DFS_input.txt" />
         <option value="$PROJECT_DIR$/input.txt" />
-        <option value="$PROJECT_DIR$/수업.py" />
         <option value="$PROJECT_DIR$/Ladder_input.txt" />
         <option value="$PROJECT_DIR$/Ladder.py" />
         <option value="$PROJECT_DIR$/Ladder_선생님.py" />
         <option value="$PROJECT_DIR$/Ladder_DFS.py" />
+        <option value="$PROJECT_DIR$/수업.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
+    <option name="x" value="795" />
+    <option name="y" value="6" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -183,7 +195,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Ladder_DFS">
+  <component name="RunManager" selected="Python.수업">
     <configuration name="수업" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="190821" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -276,9 +288,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.수업" />
         <item itemvalue="Python.Ladder_DFS" />
         <item itemvalue="Python.Ladder" />
-        <item itemvalue="Python.수업" />
         <item itemvalue="Python.4866" />
       </list>
     </recent_temporary>
@@ -297,7 +309,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="795" y="6" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20833333" />
@@ -305,8 +317,8 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33114034" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39522257" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33114034" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39473686" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -322,18 +334,37 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/수업.py</url>
+          <line>113</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/수업.py</url>
+          <line>120</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/수업.py</url>
+          <line>111</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/수업.py</url>
+          <line>103</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/수업.py">
+    <entry file="file://$PROJECT_DIR$/Ladder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2622">
-          <caret line="138" column="33" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="33" />
-          <folding>
-            <marker date="1566369259272" expanded="true" signature="317:324" ph="..." />
-            <marker date="1566369259272" expanded="true" signature="798:805" ph="..." />
-            <marker date="1566369259272" expanded="true" signature="901:908" ph="..." />
-            <marker date="1566369259272" expanded="true" signature="1893:1900" ph="..." />
-            <marker date="1566369259272" expanded="true" signature="1893:2456" ph="..." />
-          </folding>
+        <state>
+          <caret selection-end-line="2" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -365,19 +396,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Ladder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Ladder_DFS.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
           <folding>
             <marker date="1566434161055" expanded="true" signature="69:295" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/수업.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="120" selection-start-line="120" selection-end-line="120" />
+          <folding>
+            <marker date="1566449915361" expanded="true" signature="317:324" ph="..." />
+            <marker date="1566449915361" expanded="true" signature="798:805" ph="..." />
+            <marker date="1566449915361" expanded="true" signature="901:908" ph="..." />
+            <marker date="1566449915361" expanded="true" signature="1814:2639" ph="..." />
+            <marker date="1566449915361" expanded="true" signature="1883:1888" ph="..." />
+            <marker date="1566449915361" expanded="true" signature="1883:2406" ph="..." />
           </folding>
         </state>
       </provider>
