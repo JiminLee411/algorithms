@@ -9,15 +9,10 @@ for _ in range(10):
 
     for i in range(98, -1, -1):
         if X != 0 and board[i][X - 1] == 1:
-            while board[i][X - 1] == 1:
-                if X == 1:
-                    X = 0
-                    break
+            while X > 0 and board[i][X - 1] == 1:
                 X -= 1
         elif X != 99 and board[i][X + 1] == 1:
-            while board[i][X + 1] == 1:
-                if X == 98:
-                    X = 99
-                    break
+            while X < 99 and board[i][X + 1] == 1:
                 X += 1
     print('#{} {}'. format(t, X))
+
