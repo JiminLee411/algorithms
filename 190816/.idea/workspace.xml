@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6d8c5f1-2c24-4e77-969e-ad458e27d514" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../190821/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../190821/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../190821/Ladder.py" beforeDir="false" afterPath="$PROJECT_DIR$/../190821/Ladder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../190821/Ladder_선생님.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
