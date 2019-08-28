@@ -29,3 +29,33 @@ for t in range(1, int(input()) + 1):
     res = tournament(tmp) + 1
 
     print('#{} {}'. format(t, res))
+
+# 선생님 코드
+def divide(l, r):
+    if l == r: return
+    mid = (l, r) >> 1
+
+    divide(l, r)
+    divide(mid + 1, r)
+
+divide(0, 7)
+
+# 선생님 설명
+win = {1: 3, 2: 1, 3: 2}
+
+def play(l, r):
+    if l ==r : return l
+
+    mid = (l + r) >> 1
+
+    l = play(l, mid)
+    r = play(mid + 1, r)
+
+    if cards[l] == cards[r] or win[cards[l]] == cards[r]:
+        return l
+    return r
+
+for t in range(1, int(input()) + 1):
+    N = int(input())
+    cards = list(map(int,input().split()))
+
