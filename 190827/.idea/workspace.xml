@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="170ff4e4-f4e6-4d76-b720-f7743bf7a6dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../190828/BFS_input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../190828/BFS_미로_input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../190828/Queue_영준이의카드카운팅.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../190828/class_BFS.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../190828/class_BFS_미로.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../190828/class_revisit마이쮸.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../190828/class_우선순위큐.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../190828/class_원형큐.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../190828/class_큐.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../190828/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4881_배열의최소합.py" beforeDir="false" afterPath="$PROJECT_DIR$/4881_배열의최소합.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
-    </list>
+    <list default="true" id="170ff4e4-f4e6-4d76-b720-f7743bf7a6dd" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +12,7 @@
     <session id="1929743063">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.opened" value="2" />
@@ -70,7 +56,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/4875_미로.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
+            <state relative-caret-position="183">
               <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <marker date="1566971256821" expanded="true" signature="69:517" ph="..." />
@@ -292,14 +278,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="738" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26285714" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32894737" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32894737" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44298247" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -409,7 +394,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/4875_미로.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
+        <state relative-caret-position="183">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <marker date="1566971256821" expanded="true" signature="69:517" ph="..." />
