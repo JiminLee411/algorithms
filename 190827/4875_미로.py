@@ -27,3 +27,19 @@ for t in range(1, int(input()) + 1):
             break
     res = DFS(row, column, N)
     print('#{} {}'. format(t, res))
+
+# 선생님 코드
+# def DFS(x, y):
+#     if maze[x][y] == '3' : return True
+#
+#     maze[x][y] = '1'
+#
+#     for (dx, dy) in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
+#         tx, ty = x + dx, y + dy
+#         if tx < 0 or tx == N or ty < 0 or ty == N or maze[tx][ty] == '1' : continue
+#         if DFS(tx, ty):
+#             maze[x][y] = '0'
+#             return True
+#
+#         maze[x][y] = '0'
+#         return False
