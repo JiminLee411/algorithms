@@ -8,7 +8,7 @@ for t in range(1, int(input()) + 1):
     cnt = [13, 13, 13, 13]
     tmp = 0
     for i in range(len(card)):
-        for j in range(len(card)):
+        for j in range(i + 1, len(card)):
             if i != j:
                 if card[i] == card[j]:
                     tmp = 1
