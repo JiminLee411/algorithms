@@ -104,7 +104,7 @@ class List:
         if self.head is None:
             return
         cur = self.head
-        for _ in range(1):
+        while cur is not None:
             print(' {}'.format(cur.data), end='')
             cur = cur.next
         print()
@@ -151,16 +151,16 @@ for t in range(1, int(input())):
     N, M = map(int, input().split())
     arr = List()
     for value in map(int, input().split()):
-        arr.insertlast(Node(value))
+        arr.insertFirst(Node(value))
         arr.printlist()
-    for _ in range(M - 1):
-        addArr = List()
-        for addNum in map(int, input().split()):
-            addArr.insertlast(Node(addNum))
-        arr.listExtend(addArr)
-        print('#{}'. format(t), end='')
-
-    print()
+    # for _ in range(M - 1):
+    #     addArr = List()
+    #     for addNum in map(int, input().split()):
+    #         addArr.insertlast(Node(addNum))
+    #     arr.listExtend(addArr)
+    #     print('#{}'. format(t), end='')
+    #
+    # print()
 
 
 
