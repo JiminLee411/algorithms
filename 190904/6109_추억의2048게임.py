@@ -62,4 +62,3 @@ for t in range(1, int(input()) + 1):
     print('#{}'. format(t))
     for i in range(N):
         print(res[i])
-
