@@ -1,4 +1,4 @@
-## 190904
+# 190904
 
 SE - 9월 4, 5일 집중실습
 
@@ -220,7 +220,7 @@ SE - 9월 4, 5일 집중실습
 
   
 
-* 14501.퇴사 - 최적해문제 / 바이너리 카운팅 / 백트래킹
+* [14501.퇴사](https://www.acmicpc.net/problem/14501) - 최적해문제 / 바이너리 카운팅 / 백트래킹
 
   > 상담일들의 부분집합을 생성해서 각 상담기간이 겹치는 부분집합은 제외
   >
@@ -253,3 +253,177 @@ SE - 9월 4, 5일 집중실습
     ```
 
     * DFS를 할 땐, 썻다 지웠다하고, BFS를 할 땐  `queue` 에 다 넣으면 된다.
+
+
+
+# 190905
+
+## 백준
+
+1. [15686.치킨배달](https://www.acmicpc.net/problem/15686)
+
+   * 백트래킹으로 풀어보기 - 시간 초과
+
+     ```python
+     N, M = map(int, input().split())
+     city = [list(map(int, input().split())) for _ in range(N)]
+     visit = []
+     res = 0xffffff
+     
+     def chickenStore(row, col, store):
+         global res
+         if store > M: return
+         if store == M:
+             res = min(res, chickenLoad())
+             return
+         for r in range(N):
+             for c in range(N):
+                 if r < row or (r == row and c <= col):
+                     continue
+                 if city[r][c] == 2:
+                     visit.append([r, c])
+                     chickenStore(r, c, store + 1)
+                     visit.pop()
+                     chickenStore(r, c, store)
+     def chickenLoad():
+         total = 0
+         for r in range(N):
+             for c in range(N):
+                 if city[r][c] == 1:
+                     minDist = N*2
+                     for cr, cc in visit:
+                         minDist = min(minDist, abs(r - cr) + abs(c - cc))
+                     total += minDist
+         return total
+     
+     chickenStore(-1, -1, 0)
+     print(res)
+     ```
+
+   * 집과 치킨집 위치를 따로 저장해서 반복을 없애기 - 시간초과
+
+     ```python
+     N, M = map(int, input().split())
+     city = [list(map(int, input().split())) for _ in range(N)]
+     visit = []
+     home = []
+     chicken = []
+     res = 0xffffff
+     
+     def chickenStore(row, col, store):
+         global res
+         if store > M: return
+         if store == M:
+             res = min(res, chickenLoad())
+             return
+         for r, c in chicken:
+             if r < row or (r == row and c <= col):
+                 continue
+             visit.append([r, c])
+             chickenStore(r, c, store + 1)
+             visit.pop()
+             chickenStore(r, c, store)
+             
+     def chickenLoad():
+         total = 0
+         for r, c in home:
+             minDist = N*2
+             for cr, cc in visit:
+                 minDist = min(minDist, abs(r - cr) + abs(c - cc))
+             total += minDist
+         return total
+     
+     for r in range(N):
+         for c in range(N):
+             if city[r][c] == 1:
+                 home.append([r, c])
+             if city[r][c] == 2:
+                 chicken.append([r, c])
+     chickenStore(-1, -1, 0)
+     
+     print(res)
+     ```
+
+   * 거리계산을 미리 리스트에 넣어서 반복을 없애기 - 성공!!
+
+     ```python
+     N, M = map(int, input().split())
+     city = [list(map(int, input().split())) for _ in range(N)]
+     visit = []
+     home = []
+     chicken = []
+     res = 0xffffff
+     
+     def chickenStore(idx, last, store):
+         global res
+         global M
+         if store > M: return
+         if store == M:
+             res = min(res, chickenLoad())
+             return
+         if idx < last:
+             visit.append(idx)
+             chickenStore(idx + 1, last, store + 1)
+             visit.pop()
+             chickenStore(idx + 1, last, store)
+     
+     def chickenLoad():
+         total = 0
+         for i in range(len(dist)):
+             minDist = N*2
+             for j in visit:
+                 minDist = min(minDist, dist[i][j])
+             total += minDist
+         return total
+     
+     for r in range(N):
+         for c in range(N):
+             if city[r][c] == 1:
+                 home.append([r, c])
+             if city[r][c] == 2:
+                 chicken.append([r, c])
+     
+     dist = [[] for _ in range(len(home))]
+     for i in range(len(home)):
+         for rr, cc in chicken:
+             dist[i].append(abs(home[i][0] - rr) + abs(home[i][1] - cc))
+     chickenStore(0, len(dist[0]), 0)
+     
+     print(res)
+     ```
+
+2. [17144.미세먼지안녕!](https://www.acmicpc.net/problem/17144)
+
+   * 미세먼지 분포 알고리즘
+
+     ```python
+     import sys
+     import operator
+     
+     sys.stdin = open('BJ_17144_input.txt', 'r')
+     
+     R, C, T = map(int, input().split())
+     room = [list(map(int, input().split())) for _ in range(R)]
+     spread = [[0 for _ in range(C)] for _ in range(R)]
+     
+     for r in range(R):
+         for c in range(C):
+             if room[r][c] > 0:
+                 dust = room[r][c] // 5
+                 for y, x in zip([0, 0, -1, 1], [-1, 1, 0, 0]):
+                     if (r + y < 0 or r + y >= R) or (c + x < 0 or c + x >= C):
+                         continue
+                     if room[r + y][c + x] >= 0:
+                         spread[r + y][c + x] += dust
+                         room[r][c] -= dust
+     for r in range(R):
+         room[r] = list(map(operator.add,room[r],spread[r]))
+     ```
+
+   * **공기청정기 바람 추가 작성 필요!!**
+
+     ```python
+     
+     ```
+
+     
