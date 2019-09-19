@@ -147,17 +147,9 @@
       arr = [input() for _ in range(N)]
   
       for r in range(N):
-          last = 0
           for c in range(M-1, 0, -1):
-              if arr[r][c] == '1':
-                  last = 1
-                  break
-          if last == 1:
-              break
-      totalCode = arr[r][c-55:c+1]
-  
-      return Decoding(totalCode)
-  
+      		totalCode = arr[r][c-55:c+1]
+  			return Decoding(totalCode)
   
   def Decoding(totalCode):
       tmp = [0, 0]
@@ -185,10 +177,166 @@
   
       print('#{} {}'. format(tc, res))
   ```
+  
+* 선생님 (비율을 이용해라)
 
+  * 1
 
+    ```python
+    C = {
+        (3, 2, 1, 1): 0,
+        (2, 2, 2, 1): 1,
+        (2, 1, 2, 2): 2,
+        (1, 4, 1, 1): 3,
+        (1, 1, 3, 2): 4,
+        (1, 2, 3, 1): 5,
+        (1, 1, 1, 4): 6,
+        (1, 3, 1, 2): 7,
+        (1, 2, 1, 3): 8,
+        (3, 1, 1, 2): 9
+    }
+    
+    T = int(input())
+    for tc in range(1, T + 1):
+        N, M = map(int, input().split())
+    
+        arr = [input() for _ in range(N)]
+    
+        def find():
+            pwd = [0] * 8
+            for i in range(N):
+                j = M - 1
+                while j >= 0:
+                    if arr[i][j] == '1':
+                        for k in range(7, -1, -1):
+                            c1 = c2 = c3 = c4 = 0
+                            while arr[i][j] == '1':
+                                c4, j = c4 + 1, j - 1
+                            while arr[i][j] == '0':
+                                c3, j = c3 + 1, j - 1
+                            while arr[i][j] == '1':
+                                c2, j = c2 + 1, j - 1
+    
+                            c1 = 7 - (c2 + c3 + c4)
+                            pwd[k] = C[(c1, c2, c3, c4)]
+                            j -= c1
+                        a = pwd[0] + pwd[2] + pwd[4] + pwd[6]
+                        b = pwd[1] + pwd[3] + pwd[5] + pwd[7]
+                        if (a * 3 + b) % 10 == 0:
+                            return a + b
+                        else: return 0
+                    j -= 1
+            return 0
+    
+        print('#{} {}'.format(tc, find()))
+    ```
 
-#### [4. 4366_정식이의은행업무]([https://swexpertacademy.com/main/talk/solvingClub/problemView.do?contestProbId=AWMeRLz6kC0DFAXd&solveclubId=AWw8omwKmQQDFAUD&problemBoxTitle=01.Start%289%EC%9B%9418%EC%9D%BC%2F19%EC%9D%BC%29&problemBoxCnt=3&probBoxId=AW1CLuJK37kDFARC](https://swexpertacademy.com/main/talk/solvingClub/problemView.do?contestProbId=AWMeRLz6kC0DFAXd&solveclubId=AWw8omwKmQQDFAUD&problemBoxTitle=01.Start(9월18일%2F19일)&problemBoxCnt=3&probBoxId=AW1CLuJK37kDFARC)
+  * `c1` 빼보자!
+
+    ```python
+    C = {
+        (3, 2, 1, 1): 0,
+        (2, 2, 2, 1): 1,
+        (2, 1, 2, 2): 2,
+        (1, 4, 1, 1): 3,
+        (1, 1, 3, 2): 4,
+        (1, 2, 3, 1): 5,
+        (1, 1, 1, 4): 6,
+        (1, 3, 1, 2): 7,
+        (1, 2, 1, 3): 8,
+        (3, 1, 1, 2): 9
+    }
+    
+    T = int(input())
+    for tc in range(1, T + 1):
+        N, M = map(int, input().split())
+    
+        arr = [input() for _ in range(N)]
+    
+        def find():
+            for i in range(N):
+                j = M - 1
+                while j >= 0:
+                    if arr[i][j] == '1':
+                        pwd = []
+                        for k in range(8):
+                            c2 = c3 = c4 = 0
+                            while arr[i][j] == '1':
+                                j = j - 1
+                            while arr[i][j] == '1':
+                                c4, j = c4 + 1, j - 1
+                            while arr[i][j] == '0':
+                                c3, j = c3 + 1, j - 1
+                            while arr[i][j] == '1':
+                                c2, j = c2 + 1, j - 1
+    						MIN = min(c2, c3, c4)
+                            pwd.append(P[c2//MIN, c3//MIN, c4//MIN])
+                        a = pwd[0] + pwd[2] + pwd[4] + pwd[6]
+                        b = pwd[1] + pwd[3] + pwd[5] + pwd[7]
+                        if (a * 3 + b) % 10 == 0:
+                            return a + b
+                        else: return 0
+                    j -= 1
+            return 0
+    
+        print('#{} {}'.format(tc, find()))
+    ```
+
+  * 코드가 여러개일 경우!
+
+    ```python
+    C = {
+        (3, 2, 1, 1): 0,
+        (2, 2, 2, 1): 1,
+        (2, 1, 2, 2): 2,
+        (1, 4, 1, 1): 3,
+        (1, 1, 3, 2): 4,
+        (1, 2, 3, 1): 5,
+        (1, 1, 1, 4): 6,
+        (1, 3, 1, 2): 7,
+        (1, 2, 1, 3): 8,
+        (3, 1, 1, 2): 9
+    }
+    
+    T = int(input())
+    for tc in range(1, T + 1):
+        N, M = map(int, input().split())
+    
+        arr = [input() for _ in range(N)]
+    
+        def find():
+            for i in range(N):
+                j = M - 1
+                while j >= 0:
+                    if arr[i][j] == '1' and arr[i - 1][j] == '0':
+                        pwd = []
+                        for k in range(8):
+                            c2 = c3 = c4 = 0
+                            while arr[i][j] == '1':
+                                j = j - 1
+                            while arr[i][j] == '1':
+                                c4, j = c4 + 1, j - 1
+                            while arr[i][j] == '0':
+                                c3, j = c3 + 1, j - 1
+                            while arr[i][j] == '1':
+                                c2, j = c2 + 1, j - 1
+    						MIN = min(c2, c3, c4)
+                            pwd.append(P[c2//MIN, c3//MIN, c4//MIN])
+                        a = pwd[0] + pwd[2] + pwd[4] + pwd[6]
+                        b = pwd[1] + pwd[3] + pwd[5] + pwd[7]
+                        if (a * 3 + b) % 10 == 0:
+                            return a + b
+                        else: return 0
+                    j -= 1
+            return 0
+    
+        print('#{} {}'.format(tc, find()))
+    
+    ```
+
+  
+
+#### 4. [4366_정식이의은행업무]([https://swexpertacademy.com/main/talk/solvingClub/problemView.do?contestProbId=AWMeRLz6kC0DFAXd&solveclubId=AWw8omwKmQQDFAUD&problemBoxTitle=01.Start%289%EC%9B%9418%EC%9D%BC%2F19%EC%9D%BC%29&problemBoxCnt=3&probBoxId=AW1CLuJK37kDFARC](https://swexpertacademy.com/main/talk/solvingClub/problemView.do?contestProbId=AWMeRLz6kC0DFAXd&solveclubId=AWw8omwKmQQDFAUD&problemBoxTitle=01.Start(9월18일%2F19일)&problemBoxCnt=3&probBoxId=AW1CLuJK37kDFARC)
 
 * **PASS** : 하나씩 변경해가면서 비교
 
