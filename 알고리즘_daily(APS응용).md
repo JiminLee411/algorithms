@@ -376,7 +376,7 @@
 
 # 20190919
 
-## SWEP
+## 완전 검색
 
 ### 1. [5188_최소합]()
 
@@ -432,5 +432,150 @@
       print('#{} {}'. format(tc,min(res)))
   ```
 
+
+### 2. [5189_전자카트]()
+
+* **FAIL**
+
+  ```python
+  def Check(r):
+      global res, tmp
+      if r == N:
+          if res > tmp:
+              res = tmp
+          return
+      for i in range(N):
+          if i == r or visit[i]:
+              continue
+          visit[i] = 1
+          tmp += arr[r][i]
+          Check(r+1)
+          tmp -= arr[r][i]
+          visit[i] = 0
+  
+  for tc in range(1, int(input()) + 1):
+      N = int(input())
+  
+      arr = [list(map(int, input().split())) for _ in range(N)]
+      visit = [0 for _ in range(N)]
+      tmp = 0
+      res = 0xfffff
+      Check(0)
+      print('#{} {}'. format(tc, res))
+  ```
+
+* **PASS**
+
+  ```python
+  def Check(r, cnt):
+      global res, tmp
+      if cnt == N:
+          if res > tmp:
+              res = tmp
+          return
+      for i in range(N):
+          if i == r or visit[0][i] or visit[1][r]:
+              continue
+          visit[0][i], visit[1][r] = 1, 1
+          tmp += arr[r][i]
+          Check(i, cnt + 1)
+          tmp -= arr[r][i]
+          visit[0][i], visit[1][r] = 0, 0
+  
+  for tc in range(1, int(input()) + 1):
+      N = int(input())
+  
+      arr = [list(map(int, input().split())) for _ in range(N)]
+      visit = [[0 for _ in range(N)] for _ in range(2)]
+      tmp, res = 0, 0xfffff
+  
+      Check(0, 0)
+      print('#{} {}'. format(tc, res))
+  ```
+
   
 
+## 탐욕 알고리즘
+
+### 1. [5201_컨테이너 운반]()
+
+* **FAIL** : 제한시간 초과 (5/10)
+
+  ```python
+  def Check(r):
+      global res, tmp
+      if not 0 in fin or r == M:
+          if res < tmp:
+              res = tmp
+          return
+      for i in range(N):
+          if fin[i] or max_w[r] < N_w[i]:
+              fin[i] = 1
+              continue
+          fin[i] = 1
+          tmp += N_w[i]
+          Check(r + 1)
+          tmp -= N_w[i]
+          fin[i] = 0
+  
+  for tc in range(1, int(input()) + 1):
+      N, M = map(int, input().split())
+      N_w = sorted(list(map(int, input().split())))
+      max_w = sorted(list(map(int, input().split())))
+      N_w.reverse()
+      max_w.reverse()
+      fin = [0 for _ in range(N)]
+      res = tmp = 0
+      Check(0)
+      print('#{} {}'. format(tc, res))
+  ```
+
+* **PASS** : 재귀가 아닌 그냥 코드 작성
+
+  ```python
+  for tc in range(1, int(input()) + 1):
+      N, M = map(int, input().split())
+      N_w = sorted(list(map(int, input().split())))
+      max_w = sorted(list(map(int, input().split())))
+      N_w.reverse()
+      max_w.reverse()
+      fin = [0 for _ in range(N)]
+      res = tmp = 0
+  
+      for i in range(M):
+          for j in range(N):
+              if not fin[j] and max_w[i] >= N_w[j]:
+                  fin[j] = 1
+                  tmp += N_w[j]
+                  break
+  
+      if res < tmp:
+          res = tmp
+  
+      print('#{} {}'. format(tc, res))
+  ```
+
+
+
+### 2. [5202_화물도크]()
+
+* **PASS**
+
+  ```python
+  for t in range(1, int(input()) + 1):
+      N = int(input())
+      arr = [list(map(int, input().split())) for _ in range(N)]
+      arr.sort(key=lambda element:element[1])
+      choose = []
+      choose.append(arr[0])
+      tmp = arr[0][1]
+      for i in range(N):
+          if arr[i][0] < tmp:
+              continue
+          choose.append(arr[i])
+          tmp = arr[i][1]
+  
+      print('#{} {}'.format(t, len(choose)))
+  ```
+
+  
