@@ -12,11 +12,11 @@
     <session id="1929743063">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -54,15 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/4875_미로.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="184">
               <caret line="16" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <marker date="1566971256821" expanded="true" signature="69:517" ph="..." />
-                <marker date="1566971256821" expanded="true" signature="889:896" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -72,10 +68,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="760">
               <caret line="40" selection-start-line="40" selection-end-line="40" />
-              <folding>
-                <marker date="1566951973136" expanded="true" signature="732:737" ph="..." />
-                <marker date="1566951973136" expanded="true" signature="883:1069" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -98,7 +90,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/4881_배열의최소합.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
@@ -126,7 +118,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="738" />
+    <option name="width" value="1182" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -135,7 +127,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -147,10 +138,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.updates" />
   </component>
   <component name="RunDashboard">
@@ -236,9 +228,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Program Files\Python35\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/4881_배열의최소합.py" />
@@ -279,14 +271,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="738" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="1182" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26285714" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16083916" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32894737" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32858709" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44298247" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -366,10 +359,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="760">
           <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <marker date="1566951973136" expanded="true" signature="732:737" ph="..." />
-            <marker date="1566951973136" expanded="true" signature="883:1069" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -387,21 +376,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/4881_배열의최소합.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" selection-start-line="8" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/4875_미로.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <marker date="1566971256821" expanded="true" signature="69:517" ph="..." />
-            <marker date="1566971256821" expanded="true" signature="889:896" ph="..." />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4881_배열의최소합.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" selection-start-line="8" selection-end-line="9" />
         </state>
       </provider>
     </entry>

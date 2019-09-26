@@ -205,24 +205,24 @@
 # perm(0, N)
 
 # 매개변수 자체로 저장해 넘겨준다
-# arr = 'ABC'
-# N = len(arr)
-# order = [0] * N     # 실제 요소들의 순서(index를 기록)
-#
-# def perm(k, n, used):
-#     if k == n:
-#         for i in range(N):
-#             print(arr[order[i]], end=' ')
-#         print()
-#         return
-#
-#     for i in range(N):
-#         if used & (1 << i):
-#             continue
-#         order[k] = i
-#         perm(k + 1, n, used | (1 << i))
-#
-# perm(0, N, 0)
+arr = 'ABC'
+N = len(arr)
+order = [0] * N     # 실제 요소들의 순서(index를 기록)
+
+def perm(k, n, used):
+    if k == n:
+        for i in range(N):
+            print(order[i], end=' ')
+        print()
+        return
+
+    for i in range(N):
+        if used & (1 << i):
+            continue
+        order[k] = i
+        perm(k + 1, n, used | (1 << i))
+
+perm(0, N, 0)
 
 
 # 동전 교환 문제
@@ -283,14 +283,14 @@
 # perm(0, N, 0)           # 0: 선택한 수, N: 전체원소수, 0: 선택한 요소들의 집합\
 
 # 병합정렬
-arr = [6, 4, 2, 5, 1, 9, 2, 11, 8, 7]
+# arr = [6, 4, 2, 5, 1, 9, 2, 11, 8, 7]
 
-def getMin(first, last):
-    if first == last:
-        return arr[first]
-    mid = (first + last) >> 1
-    return min(getMin(first, mid), getMin(mid + 1, last))
+# def getMin(first, last):
+#     if first == last:
+#         return arr[first]
+#     mid = (first + last) >> 1
+#     return min(getMin(first, mid), getMin(mid + 1, last))
 
-print(getMin(0, len(arr) - 1 ))
+# print(getMin(0, len(arr) - 1 ))
 
 # 퀵정렬
