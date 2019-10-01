@@ -1,4 +1,4 @@
-order = 'ABC'; N=len(arr)
+order = 'ABC'; N=len(order)
 used = [0] * N                      # 실제 요소들의 순서(index를 기록)
 
 def perm(k, n):

@@ -607,4 +607,146 @@
       print('#{} {}'.format(t, len(choose)))
   ```
 
+
+
+
+# 20190926
+
+
+
+
+
+# 20190930
+
+
+
+
+
+# 20191001
+
+## DP - 1
+
+### 1. [3752_가능한 시험 점수]([https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AWw8omwKmQQDFAUD&contestProbId=AWHPkqBqAEsDFAUn&probBoxId=AW2A9nUqjE8DFASu&type=PROBLEM&problemBoxTitle=%EC%A7%91%EC%A4%91%EC%8B%A4%EC%8A%B5%2810%EC%9B%9401%EC%9D%BC%29&problemBoxCnt=3](https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AWw8omwKmQQDFAUD&contestProbId=AWHPkqBqAEsDFAUn&probBoxId=AW2A9nUqjE8DFASu&type=PROBLEM&problemBoxTitle=집중실습(10월01일)&problemBoxCnt=3)
+
+* **Fail** : 제한시간 초과
+
+* **선생님**
+
+  ```python
+  # 1. DFS
+  def backtrack(k, s):    # k: 트리의 높이, 문항번호  s: 지금까지 점수합
+      global cnt
+      if k == N:
+          if visit[s] == 0:
+              cnt += 1
+              visit[s] = 1
+      else:
+          backtrack(k + 1, s)             # K번 문제 틀림
+          backtrack(k + 1, s + arr[k])    # K번 문제 맞음
   
+  for tc in range(1, int(input()) + 1):
+      N = int(input())
+      arr = list(map(int, input().split()))
+      visit = [0] * 10001
+      cnt = 0
+      backtrack(0, 0)
+  
+      print('#{} {}'. format(tc, cnt))
+  ```
+
+  * visit을 이용하여 count
+
+  ```python
+  for tc in range(1, int(input()) + 1):
+      N = int(input())
+      arr = list(map(int, input().split()))
+      visit = [0] * 10001
+      visit[0] = 1
+  
+      for s in arr:
+          for i in range(10000, -1, -1):
+              if visit[i]:
+                  visit[i + s] = 1
+      print(visit.count(1))
+  ```
+
+  * `set()` 이용
+
+  ```python
+  for t in range(1, int(input()) + 1):
+      input()
+      prev, now = {0}, {0}
+      for i in map(int, input().split()):
+          for j in prev:
+              if j + i not in now:
+                  now.add(i + j)
+          prev = set(now)
+      print('#{} {}'.format(t, len(now)))
+  ```
+
+  
+
+### 2. [2819_격자판의 숫자 이어 붙이기]()
+
+* **Fail** : 제한시간 초과
+
+  ```python
+  def DFS(r, c, k):
+      global cnt, tmp
+      if k == 7:
+          if not tmp in storage:
+              storage.append(list(tmp))
+              cnt += 1
+          return
+  
+      for x, y in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
+          if 0 <= r + x < 4 and 0 <= c + y < 4:
+              tmp.append(arr[r + x][c + y])
+              DFS(r + x, c + y, k + 1)
+              tmp.pop()
+  
+  
+  for tc in range(1, int(input()) + 1):
+      arr = [list(map(int, input().split())) for _ in range(4)]
+      storage = []
+      tmp = []
+      cnt = 0
+      for r in range(4):
+          for c in range(4):
+              DFS(r, c, 0)
+      print('#{} {}'. format(tc, cnt))
+  ```
+
+  * 가지치기를 해야한다!!!!
+
+* **Pass** : list대신 set함수를 이용하여 자동적으로 가지치기를 시도!
+
+  ```python
+  def DFS(r, c, k):
+      global cnt, tmp
+      if k == 7:
+          storage.add(''.join(tmp))
+          return
+  
+      for x, y in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
+          if 0 <= r + x < 4 and 0 <= c + y < 4:
+              tmp.append(str(arr[r + x][c + y]))
+              DFS(r + x, c + y, k + 1)
+              tmp.pop()
+  
+  for tc in range(1, int(input()) + 1):
+      arr = [list(map(int, input().split())) for _ in range(4)]
+      storage = set()
+      tmp = []
+      cnt = 0
+      for r in range(4):
+          for c in range(4):
+              DFS(r, c, 0)
+      print('#{} {}'. format(tc, len(storage)))
+  ```
+
+
+
+### 3. [1247_최적의 경로(ing)]()
+
+* 
