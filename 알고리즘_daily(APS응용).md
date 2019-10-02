@@ -750,3 +750,85 @@
 ### 3. [1247_최적의 경로(ing)]()
 
 * 
+
+
+
+
+
+# 20191002
+
+## DP - 1
+
+### 1. [7465_창용마을 무리의 개수]()
+
+* **Pass** : BFS이용
+
+  ```python
+  import collections
+  
+  def BFS(v):
+      Q.append(v)
+      visit[v] = 1
+      while Q:
+          v = Q.popleft()
+          for w in G[v]:
+              if not visit[w]:
+                  Q.append(w)
+                  visit[w] = 1
+      return 1
+  
+  
+  
+  for tc in range(1, int(input()) + 1):
+      N, M = map(int, input().split())
+      G = [[] for _ in range(N + 1)]
+      visit = [0] * (N + 1)
+      cnt = 0
+  
+      for _ in range(M):
+          v, u = map(int, input().split())
+          G[v].append(u)
+          G[u].append(v)
+  
+      Q = collections.deque()
+      for i in range(1, N + 1):
+          if not visit[i]:
+              cnt += BFS(i)
+  
+      print('#{} {}'. format(tc, cnt))
+  ```
+
+
+
+### 2. [1861_정사각형의 방]()
+
+* **Pass** : DFS 이용 -> 가지치기 필요할거 같음
+
+  ```python
+  def DFS(r, c):
+      global MAX, cnt
+      for dr, dc in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
+          if 0 <= r + dr < N and 0 <= c + dc < N and rooms[r][c] + 1 == rooms[r + dr][c + dc]:
+              cnt += 1
+              DFS(r + dr, c + dc)
+  
+  
+  for tc in range(1, int(input()) + 1):
+      N = int(input())
+      rooms = [list(map(int, input().split())) for _ in range(N)]
+      MAX = 0
+      for r in range(N):
+          for c in range(N):
+              cnt = 0
+              DFS(r, c)
+              if MAX < cnt:
+                  MAX = cnt
+                  room = rooms[r][c]
+              elif MAX == cnt and room > rooms[r][c]:
+                  MAX = cnt
+                  room = rooms[r][c]
+  
+      print('#{} {} {}'. format(tc, room, MAX + 1))
+  ```
+
+  
