@@ -12,37 +12,38 @@
     <session id="884597935">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="4" />
+          <entry key="py" value="5" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="4" />
+          <entry key="Python" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2073" />
+          <entry key="py" value="3189" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2073" />
+          <entry key="Python" value="3189" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dp예시.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -52,25 +53,35 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/swep_7465창용마을무리의개수.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+            <state relative-caret-position="204">
+              <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
               <folding>
-                <marker date="1570002799280" expanded="true" signature="89:285" ph="..." />
+                <marker date="1570164724892" expanded="true" signature="89:285" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/swep_1861정사각형방.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="49" lean-forward="true" selection-start-line="4" selection-end-line="27" selection-end-column="49" />
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dd.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="63" column="24" lean-forward="true" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
               <folding>
-                <marker date="1570006230512" expanded="true" signature="92:295" ph="..." />
+                <marker date="1570152071378" expanded="true" signature="314:394" ph="..." />
+                <marker date="1570152071378" expanded="true" signature="738:856" ph="..." />
               </folding>
             </state>
           </provider>
@@ -80,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/swea_1861.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
               <folding>
                 <marker date="1570005924455" expanded="true" signature="82:346" ph="..." />
               </folding>
@@ -91,8 +102,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/swep_1861_input.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="994">
-              <caret line="702" column="21" lean-forward="true" selection-start-line="702" selection-start-column="21" selection-end-line="702" selection-end-column="21" />
+            <state relative-caret-position="11934">
+              <caret line="702" column="21" selection-start-line="702" selection-start-column="21" selection-end-line="702" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -120,16 +131,17 @@
       <list>
         <option value="$PROJECT_DIR$/dp예시.py" />
         <option value="$PROJECT_DIR$/swep_7465_input.txt" />
-        <option value="$PROJECT_DIR$/swep_7465창용마을무리의개수.py" />
         <option value="$PROJECT_DIR$/swep_1861_input.txt" />
         <option value="$PROJECT_DIR$/swea_1861.py" />
         <option value="$PROJECT_DIR$/swep_1861정사각형방.py" />
+        <option value="$PROJECT_DIR$/dd.py" />
+        <option value="$PROJECT_DIR$/swep_7465창용마을무리의개수.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1088" />
-    <option name="width" value="839" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1078" />
+    <option name="width" value="849" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -137,7 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -149,6 +160,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -166,7 +178,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.swep_1861정사각형방">
+  <component name="RunManager" selected="Python.swep_7465창용마을무리의개수">
+    <configuration name="dd" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="191002" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dd.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="dp예시" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="191002" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -256,12 +289,14 @@
       <item itemvalue="Python.swep_7465창용마을무리의개수" />
       <item itemvalue="Python.swep_1861정사각형방" />
       <item itemvalue="Python.swea_1861" />
+      <item itemvalue="Python.dd" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.swep_7465창용마을무리의개수" />
+        <item itemvalue="Python.dd" />
         <item itemvalue="Python.swep_1861정사각형방" />
         <item itemvalue="Python.swea_1861" />
-        <item itemvalue="Python.swep_7465창용마을무리의개수" />
         <item itemvalue="Python.dp예시" />
       </list>
     </recent_temporary>
@@ -280,23 +315,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1088" y="0" width="839" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1772784" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.07481559" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32968238" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286334" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -313,6 +348,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/swea_1861.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <marker date="1570005924455" expanded="true" signature="82:346" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/swep_1861_input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11934">
+          <caret line="702" column="21" selection-start-line="702" selection-start-column="21" selection-end-line="702" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="63" column="24" lean-forward="true" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+          <folding>
+            <marker date="1570152071378" expanded="true" signature="314:394" ph="..." />
+            <marker date="1570152071378" expanded="true" signature="738:856" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/swep_7465_input.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -320,39 +383,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/swep_1861_input.txt">
+    <entry file="file://$PROJECT_DIR$/swep_1861정사각형방.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="994">
-          <caret line="702" column="21" lean-forward="true" selection-start-line="702" selection-start-column="21" selection-end-line="702" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swea_1861.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <marker date="1570005924455" expanded="true" signature="82:346" ph="..." />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/swep_7465창용마을무리의개수.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        <state relative-caret-position="204">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding>
-            <marker date="1570002799280" expanded="true" signature="89:285" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/swep_1861정사각형방.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="49" lean-forward="true" selection-start-line="4" selection-end-line="27" selection-end-column="49" />
-          <folding>
-            <marker date="1570006230512" expanded="true" signature="92:295" ph="..." />
+            <marker date="1570164724892" expanded="true" signature="89:285" ph="..." />
           </folding>
         </state>
       </provider>
