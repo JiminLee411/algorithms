@@ -831,4 +831,132 @@
       print('#{} {} {}'. format(tc, room, MAX + 1))
   ```
 
+
+
+
+# 20191016
+
+## 그래프
+
+### 1.[5247_연산]()
+
+* **FAIL(시간초과)** : 테스트케이스1, 2 는 나오는데 3이 안나와! 가지치기도 많이 했는데!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 왜안돼!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+  ```python
+  # bfs 재귀
+  def bfs(n, m, cnt):
+      global res
   
+      visit[n] = 1
+      if n == m:
+          res = min(res, cnt)
+          return
+  
+      for i in range(4):
+          if cnt + 1 == res:
+              break
+  
+          if not C[i]:
+              if n * 2 < 1000000 and not visit[n * 2]:
+                  bfs(n * 2, m, cnt + 1)
+                  visit[n * 2] = 0
+          else:
+              if 0 < n + C[i] <= m and not visit[n + C[i]]:
+  
+                  bfs(n + C[i], m, cnt + 1)
+                  visit[n + C[i]] = 0
+  
+  
+  for tc in range(1, int(input()) + 1):
+      N, M = map(int, input().split())
+      C = [1, -1, 0, -10]
+      visit = [0] * 1000001
+      res = 0xfffff
+      bfs(N, M, 0)
+  
+      print('#{} {}'. format(tc, res))
+  ```
+
+  
+
+* **FAIL( 7/ 10)** : 시간초과 X!!!! -> 재귀함수로 풀면 시간이 너무 오래걸려!!!
+
+  ```python
+  # 기본 bfs
+  from collections import deque
+  
+  def bfs(n, m, cnt):
+      global res
+      Q = deque()
+      Q.append(n)
+      visit[n] = 1
+      while Q:
+          a = Q.popleft()
+          for i in range(4):
+              if not C[i]:
+                  if a * 2 < 1000000 and not visit[a * 2]:
+                      Q.append(a * 2)
+                      D[a * 2] = D[a] + 1
+                      visit[a * 2] = 1
+              else:
+                  if 0 < a + C[i] <= m and not visit[a + C[i]]:
+                      Q.append(a + C[i])
+                      D[a + C[i]] = D[a] + 1
+                      visit[a + C[i]] = 1
+  
+              if D[M] and D[M] < res:
+                  res = D[M]
+  
+  for tc in range(1, int(input()) + 1):
+      N, M = map(int, input().split())
+      C = [1, -1, 0, -10]
+      D = [0] * 1000001
+      visit = [0] * 1000001
+      res = 0xfffff
+      bfs(N, M, 0)
+  
+      print('#{} {}'. format(tc, res))
+  ```
+
+  
+
+* **PASS** : M의 최댓값은 1000000란다!!!! 지민아!!! 정신차려!!!!!!!!!!!!!!
+
+  ```python
+  from collections import deque
+  
+  def bfs(n, m, cnt):
+      global res
+      Q = deque()
+      Q.append(n)
+      visit[n] = 1
+      while Q:
+          a = Q.popleft()
+          for i in range(4):
+              if not C[i]:
+                  if a * 2 <= 1000000 and not visit[a * 2]:
+                      Q.append(a * 2)
+                      D[a * 2] = D[a] + 1
+                      visit[a * 2] = 1
+              else:
+                  if 0 < a + C[i] <= m and not visit[a + C[i]]:
+                      Q.append(a + C[i])
+                      D[a + C[i]] = D[a] + 1
+                      visit[a + C[i]] = 1
+  
+              if D[M] and D[M] < res:
+                  res = D[M]
+  
+  for tc in range(1, int(input()) + 1):
+      N, M = map(int, input().split())
+      C = [1, -1, 0, -10]
+      D = [0] * 1000001
+      visit = [0] * 1000001
+      res = 0xfffff
+      bfs(N, M, 0)
+  
+      print('#{} {}'. format(tc, res))
+  ```
+
+  
+
