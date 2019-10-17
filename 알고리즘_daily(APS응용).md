@@ -958,5 +958,134 @@
       print('#{} {}'. format(tc, res))
   ```
 
+
+
+
+# 20191017
+
+## 그래프
+
+### 1.[5248_그룹나누기]()
+
+- **PASS** :  bfs이용.
+
+  ```python
+  from collections import deque
   
+  def bfs(n):
+      Q=deque()
+      Q.append(n)
+  
+      while Q:
+          v = Q.popleft()
+          for w in G[v]:
+              if visit[w] == 1:
+                  visit[w] = 0
+                  bfs(w)
+              else:
+                  pass
+  
+  
+  for tc in range(1, int(input()) + 1):
+      N, M = map(int, input().split())
+      arr = list(map(int, input().split()))
+      G = [[0] for _ in range(N + 1)]
+      visit = [0] * (N + 1)
+  
+      for i in range(0, M * 2 - 1, 2):
+          G[arr[i]].append(arr[i + 1])
+          G[arr[i + 1]].append(arr[i])
+          visit[arr[i]] = visit[arr[i + 1]] = 1
+      cnt = visit.count(0) - 1
+      for i in range(N + 1):
+          if visit[i] == 1:
+              bfs(i)
+              cnt += 1
+      print('#{} {}'.format(tc, cnt))
+  ```
+
+
+
+### 2.[5249_최소신장트리]()
+
+* 마지막이 계속 안나와!
+
+  ```python
+  def mstPrim(v):
+      D = [11] * (V + 1)
+      D[v] = 0
+      val = [0] * (V + 1)
+      cnt = V + 1
+  
+      while cnt:
+          u, MIN = 0, 12
+  
+          for i in range(V + 1):
+              if not visit[i] and MIN > D[i]:
+                  u, MIN = i, D[i]
+  
+          visit[u] = 1
+  
+          for v, w in G[u]:
+              if not visit[v] and w + D[u] < D[v]:
+                  D[v] = w + D[u]
+  
+          cnt -= 1
+      return sum(D)
+  
+  for tc in range(1, int(input()) + 1):
+      V, E = map(int, input().split())
+      G = [[] for _ in range(V + 1)]
+      visit = [0] * (V + 1)
+      for _ in range(E):
+          u, v, w = map(int, input().split())
+          G[v].append((u, w))
+          G[u].append((v, w))
+  
+      res = mstPrim(0)
+  
+      print('#{} {}'.format(tc, res))
+  ```
+
+  * for문에서 w + D[u]를 하며 누적해 나가는 것은 최단 경로를 찾는것!!!
+  * 현재의 가중치를 넣어야한다!
+
+* **PASS**
+
+  ```python
+  def mstPrim(v):
+      D = [11] * (V + 1)
+      D[v] = 0
+      val = [0] * (V + 1)
+      cnt = V + 1
+  
+      while cnt:
+          u, MIN = 0, 12
+  
+          for i in range(V + 1):
+              if not visit[i] and MIN > D[i]:
+                  u, MIN = i, D[i]
+  
+          visit[u] = 1
+  
+          for v, w in G[u]:
+              if not visit[v] and w < D[v]:
+                  D[v] = w
+  
+          cnt -= 1
+      return sum(D)
+  
+  for tc in range(1, int(input()) + 1):
+      V, E = map(int, input().split())
+      G = [[] for _ in range(V + 1)]
+      visit = [0] * (V + 1)
+      for _ in range(E):
+          u, v, w = map(int, input().split())
+          G[v].append((u, w))
+          G[u].append((v, w))
+  
+      res = mstPrim(0)
+  
+      print('#{} {}'.format(tc, res))
+  ```
 
