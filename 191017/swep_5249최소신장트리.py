@@ -1,6 +1,7 @@
 import sys
 sys.stdin = open('swep_5249_input.txt')
 
+
 def mstPrim(v):
     D = [11] * (V + 1)
     D[v] = 0
@@ -24,6 +25,7 @@ def mstPrim(v):
         cnt -= 1
         print(D)
     return sum(D)
+
 
 for tc in range(1, int(input()) + 1):
     V, E = map(int, input().split())
