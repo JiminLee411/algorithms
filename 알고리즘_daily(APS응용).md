@@ -1089,3 +1089,45 @@
       print('#{} {}'.format(tc, res))
   ```
 
+
+
+# 20191114
+
+## 1. 1953_탈주범 검거
+
+* bfs - **pass**
+
+  ```python
+  import sys
+  
+  sys.stdin = open('swep_1953_input.txt', 'r')
+  
+  from collections import deque
+  
+  
+  def bfs(x, y, l):
+      visited = [[0] * M for _ in range(N)]
+      q = deque()
+      q.append((x, y))
+      visited[x][y] = 1
+      cnt = 1
+      while q:
+          x, y = q.popleft()
+          point = unders[x][y]
+          for dx, dy in direction[point]:
+              nx, ny = x + dx, y + dy
+              if nx < 0 or nx >= N or ny < 0 or ny >= M:
+                  continue
+              if not visited[nx][ny] and unders[nx][ny] != 0 and (-1*dx, -1*dy) in direction[unders[nx][ny]]:
+                  visited[nx][ny] = visited[x][y] + 1
+                  if visited[nx][ny] <= L:
+                      cnt += 1
+                      q.append((nx, ny))
+      from pprint import pprint
+      pprint(visited,width=M*10)
+      return cnt
+  ```
+
+* 좌표가 아닌 상수로 변경
+
+  > 복잡하므로 간단하게 하기위해
